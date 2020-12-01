@@ -1,6 +1,6 @@
 const fs = require('fs');
 //let contents = fs.readFileSync("adv01.txt", 'utf8').trim();
-var entries = fs.readFileSync('input1.txt', 'utf8').toString().trim().split("\n");
+var entries = fs.readFileSync('input1.txt', 'utf8').toString().trim().split("\r\n");
 let done = false;
 //Specifically, they need you to find the two entries that sum to 2020 and then multiply those two numbers together.
 for (var i = 0; i < entries.length && !done; i++){
