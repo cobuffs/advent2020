@@ -17,5 +17,3 @@ for (var i = 0; i < entries.length && !done; i++){
         }
     }
 }
-
-console.log('yo');
