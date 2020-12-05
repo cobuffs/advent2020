@@ -35,7 +35,7 @@ passes.forEach(pass => {
 
     let seat = seatarr[row][col];
 
-    seat.occupied = true
+    seat.occupied = true;
     seat.key = pass;
     seats.set(seat.id, seat);
 
