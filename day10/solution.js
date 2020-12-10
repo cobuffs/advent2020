@@ -48,7 +48,13 @@ while(root < outputs.length - 1) {
     root++;
 }
 
-//find all 3 3 2 1s
+//find all the 3 3 2 1s
+//find all 3 2 1s
+//find all 2 1s
+//everywhere we see 3 3 2 1 - multiply by 7
+//                  3 2 1   - multiply by 4
+//                  2 1     - multiply by 2
+
 let sevens = 0;
 let fours = 0;
 let twos = 0;
@@ -72,12 +78,6 @@ for(var i = 0; i < branchcounts.length;) {
 }
 console.log(`3321: ${sevens}, 321: ${fours}, 21: ${twos} - sum: ${Math.pow(7, sevens) * Math.pow(4,fours) * Math.pow(2,twos)} `);
 
-//find all 3 2 1s
-//find all 2 1s
-
-//everywhere we see 3 3 2 1 - multiply by 7
-//                  3 2 1   - multiply by 4
-//                  2 1     - multiply by 2
 
 console.log(outputs);
 console.log(branchcounts);
