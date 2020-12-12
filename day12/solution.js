@@ -81,9 +81,7 @@ function part2() {
 
 function rotate(x, y, angle) {
     let rads = angle * (Math.PI / 180);
-    let cos = Math.cos(rads);
-    let sin = Math.sin(rads);
-    let nx = (cos * x) + (sin * y);
-    let ny = (cos * y) - (sin * x);
-    return [Math.round(nx), Math.round(ny)];
+    let newx = (Math.cos(rads) * x) + (Math.sin(rads) * y);
+    let newy = (Math.cos(rads) * y) - (Math.sin(rads) * x);
+    return [Math.round(newx), Math.round(newy)];
 }
