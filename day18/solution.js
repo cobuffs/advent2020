@@ -22,6 +22,13 @@ for(var i = 0; i < inputs.length; i++) {
         //clear the parans
         expression.pop();
         expression.shift();
+        
+        //eval all +s
+        while(expression.indexOf("+") !== -1) {
+            let plus = expression.indexOf("+");
+            let equation = expression[plus - 1] + "+" + expression[plus + 1];
+            expression.splice(plus-1,3,eval(equation).toString());
+        }
         while(expression.length > 1) {
             let equation = expression[0] + expression[1] + expression[2];
             expression.splice(0,3,eval(equation).toString(10));
@@ -29,10 +36,18 @@ for(var i = 0; i < inputs.length; i++) {
         eq.splice(openindex,0,expression[0]);
 
     }
+
+    while(eq.indexOf("+") !== -1){
+        let plus = eq.indexOf("+");
+        let equation = eq[plus-1] + "+" + eq[plus+1];
+        eq.splice(plus-1,3,eval(equation).toString(10));
+    }
+
     while(eq.length > 1) {
         let equation = eq[0] + eq[1] + eq[2];
         eq.splice(0,3,eval(equation).toString(10));
     }
+    console.log(eq[0]);
     sum += parseInt(eq[0],10);
 }
 
